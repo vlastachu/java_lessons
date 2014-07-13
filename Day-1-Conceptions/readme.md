@@ -68,7 +68,9 @@ Java является императивным языком. Контрприм�
 > + Strong typing: A type system that I like and feel comfortable with
 > + Weak typing: A type system that worries me, or makes me feel uncomfortable
 
-<a href="http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html" style="font-style:italic; text-align:right; display:block; width:100%">вычитал в одном блоге (англ.)</a>
+<div align="right" style="width:100%;">
+[*вычитал в одном блоге (англ.)*](http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html)
+</div>
 
 Вот небольшой список языков в зависимости от типизации [википедия в качестве пруфа](http://en.wikipedia.org/wiki/Comparison_of_type_systems). На самом деле это спорно таким образом разделять языки. Java иногда может быть динамической. С# может быть статически типизирован, динамически (даже есть ключевое слово dynamic), и может быть вообще небезопасным как C.
 
