@@ -64,11 +64,14 @@ Java является императивным языком. Контрприм�
 
 По поводу сильной\слабой типизации:
 
-> Therefore: I give the following general definitions for strong and weak typing, at least when used as absolutes: 
+> I give the following general definitions for strong and weak typing, at least when used as absolutes: 
 > + Strong typing: A type system that I like and feel comfortable with
 > + Weak typing: A type system that worries me, or makes me feel uncomfortable
+> Я даю следующие общие определения для сильной и слабой типизации, по крайней мере, я буду использовать их в качестве абсолютных: 
+> + Строгая типизация: система типов, которая мне нравится, и я чувствую себя комфортно
+> + Слабая типизация: система типов, которая меня беспокоит, или заставляет меня чувствовать себя некомфортно
 
-<div align="right" style="width:100%;margin:0;font-style:italic;">
+<div align="right" style="width:100%;margin:0 0 0 20;font-style:italic;">
 <a href="http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html">
 вычитал в одном блоге (англ.)
 </a>
