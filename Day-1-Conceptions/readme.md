@@ -83,10 +83,6 @@ Java является императивным языком. Контрприм�
 > I give the following general definitions for strong and weak typing, at least when used as absolutes: 
 > + Strong typing: A type system that I like and feel comfortable with
 > + Weak typing: A type system that worries me, or makes me feel uncomfortable
->
-> Я даю следующие общие определения для сильной и слабой типизации, по крайней мере, я буду использовать их в качестве абсолютных: 
-> + Строгая типизация: система типов, которая мне нравится, и я чувствую себя комфортно
-> + Слабая типизация: система типов, которая меня беспокоит, или заставляет меня чувствовать себя некомфортно
 
 <i>
 <div align="right" style="width:100%;margin:0 40 0 0;font-style:italic;">
@@ -129,13 +125,9 @@ Static/Dynamic - Тут все проще. Язык статический ес�
 
 ```java
 class HelloWorld {
-
     public static void main (String args []) {
-
-        System. out. println ("Hello World");
-
+        System.out.println ("Hello World");
     } 
-
 }
 ```
 
