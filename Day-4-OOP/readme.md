@@ -294,3 +294,6 @@ class Incrementable {
 ##final (инициализация)
 
 
+Домашнее задание
+
+**TODO apachecommons** численное интегрирование
