@@ -272,7 +272,41 @@ else {
 ```
 Также выразительно мы можем комбинировать конструкции `if else` между собой, создавай цепочки из условий.
 
-####тернарный оператор
+###Пример ветвления: решение квадратного уравнения
+
+```java
+package ru.progexcenter.example;
+
+import java.lang.*;
+/**
+ * Application solves square root equation from given coefficients
+ */
+class SquareRoot{
+    public static void main(String[] args){
+        //get coefficients from application arguments
+        double a = Float.parseFloat(args[0]);
+        double b = Float.parseFloat(args[1]);
+        double c = Float.parseFloat(args[2]);
+
+        final double discriminant = (b * b) - (4.0d * a * c);
+        if (discriminant > 0){
+            final double root1 = (-b + Math.sqrt(discriminant)) / (2.0d * a);
+            final double root2 = (- b - Math.sqrt(discriminant)) / (2.0d * a);
+
+            System.out.println("The roots are unequal and irrational " + root1 + " and " + root2);
+        }
+        else if (discriminant == 0){
+            final double root = - b / (2.0d * a);
+            System.out.println("The roots are equal and rational " + root + " and " + root );
+        }
+        else if (discriminant < 0){
+            System.out.println("The roots are imaginary");
+        }
+    }
+} 
+```
+
+###тернарный оператор
 
 Ранее он уже упоминался вскользь. Название "тернарный" означает, что у него три аргумента. Это все равно как сказать бинарный оператор, только операторов с тремя аргументами в джава всего один. Также дела обстоят и во многих других языках, поэтому за ним закрепилось такое название. По сути это такой компактный аналог if-then-else:
 ```java
