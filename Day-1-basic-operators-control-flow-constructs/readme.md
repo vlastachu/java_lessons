@@ -306,6 +306,43 @@ class SquareRoot{
 } 
 ```
 
+###Конструкция switch
+
+```java
+   int month = 8;
+   String monthString;
+   switch (month) {
+       case 1:  monthString = "January";
+                break;
+       case 2:  monthString = "February";
+                break;
+       case 3:  monthString = "March";
+                break;
+       case 4:  monthString = "April";
+                break;
+       case 5:  monthString = "May";
+                break;
+       case 6:  monthString = "June";
+                break;
+       case 7:  monthString = "July";
+                break;
+       case 8:  monthString = "August";
+                break;
+       case 9:  monthString = "September";
+                break;
+       case 10: monthString = "October";
+                break;
+       case 11: monthString = "November";
+                break;
+       case 12: monthString = "December";
+                break;
+       default: monthString = "Invalid month";
+                break;
+   }
+   System.out.println(monthString);
+```
+Конструкция `switch` по сути является многоветочным ветвлением. То есть её можно заменить с помощью множества `if else` будет выглядет не так элегантно. Кроме того switch очень узкоспециализированная конструкция. Мы можем обработать лишь конкретные значения примитива (и только примитива).
+
 ###тернарный оператор
 
 Ранее он уже упоминался вскользь. Название "тернарный" означает, что у него три аргумента. Это все равно как сказать бинарный оператор, только операторов с тремя аргументами в джава всего один. Также дела обстоят и во многих других языках, поэтому за ним закрепилось такое название. По сути это такой компактный аналог if-then-else:
