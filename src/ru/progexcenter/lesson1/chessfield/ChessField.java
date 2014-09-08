@@ -10,7 +10,7 @@ class ChessField {
      * @argument array of strings which represent command line arguments
      */
     public static void main (String args []) {
-        int edgeSize = Integer.parseInt(args[1]);
+        int edgeSize = Integer.parseInt(args[0]);
         //TODO implement drawing
         
     } 
