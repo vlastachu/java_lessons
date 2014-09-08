@@ -9,10 +9,10 @@ class Triangle {
      * Entry point of application.
      * @argument array of strings which represent command line arguments
      */
-    public static void main (String args []) {
-        int fromTemperature = Integer.parseInt(args[1]);
-        int toTemperature = Integer.parseInt(args[2]);
-        int step = Integer.parseInt(args[3]);
+    public static void main (String[] args) {
+        int fromTemperature = Integer.parseInt(args[0]);
+        int toTemperature = Integer.parseInt(args[1]);
+        int step = Integer.parseInt(args[2]);
         //TODO implement output
         
     } 
