@@ -10,9 +10,9 @@ class Triangle {
      * @argument array of strings which represent command line arguments
      */
     public static void main (String args []) {
-        int x = Integer.parseInt(args[1]);
-        int n1 = Integer.parseInt(args[2]);
-        int n2 = Integer.parseInt(args[3]);
+        int x = Integer.parseInt(args[0]);
+        int n1 = Integer.parseInt(args[1]);
+        int n2 = Integer.parseInt(args[2]);
         //TODO implement output
         
     } 
