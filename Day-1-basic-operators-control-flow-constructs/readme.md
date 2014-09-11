@@ -456,7 +456,7 @@ ASCII-изображение прямоугольного треугольник
 Пример:
 
 ```
-> triangle 3
+> java Triangle 3
 |\
 | \
 |__\
@@ -478,7 +478,7 @@ ASCII-изображение поля с чередующимися клетка
 (излишние декорации для поля)
 
 ```
-> chess_field 5
+> java ChessField 5
 +-----+
 |# # #|
 | # # |
@@ -532,7 +532,7 @@ a не равен нулю. Все остальные принимают зна�
 Пример:
 
 ```
-> CubicSolve 4 0 -20 12
+> java CubicSolve 4 0 -20 12
 3 real roots and 0 imaginary
 x1 = -2.6
 x2 = 0.68
@@ -559,9 +559,9 @@ x & 1; //0
 **Пример:**
 
 ```
-> GetBinary 117 0 10
+> java GetBinary 117 0 10
 0001110101
-> GetBinary 117 4 7
+> java GetBinary 117 4 7
 111
 ```
 [шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/getbinary)
@@ -579,7 +579,7 @@ x & 1; //0
 **Пример:**
 
 ```
-> GetTemperature 0 70 20
+> java GetTemperature 0 70 20
 Celsius     Fahrenheit
 0           32
 20          68
