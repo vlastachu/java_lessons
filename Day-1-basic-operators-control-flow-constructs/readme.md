@@ -460,7 +460,7 @@ ASCII-изображение прямоугольного треугольник
 | \
 |__\
 ```
-
+[шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/triangle)
 ###1. b) ChessField
 Вывести в консоль шахматную доску размером n на n. Вообще говоря слово шахматная здесь сбивает с толку. Скорее поле с чередующимися клетками. Первая (верхняя левая) клетка - символ `#` следующая пробел и так далее до n-й клетки. Клетка на следующей строке начинается с противоположного символа относительно предыдущей первой клетки для предыдущей строки (вообщем клетки чередуются слева направо и сверху вниз). Другие символы и декорации на ваше усмотрение.
 
@@ -486,7 +486,7 @@ ASCII-изображение поля с чередующимися клетка
 |# # #|
 +-----+
 ```
-
+[шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/chessfield)
 ###2. CubicSolve
 4 входных параметра (double) a, b, c, d. Представляют собой коэффициенты в кубическом уравнении:
 
@@ -537,6 +537,7 @@ x1 = -2.6
 x2 = 0.68
 x3 = 1.66
 ```
+[шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/cubicsolve)
 
 (скорей всего у вас будет на порядок точнее вывод).
 
@@ -562,7 +563,7 @@ x & 1; //0
 > GetBinary 117 4 7
 111
 ```
-
+[шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/getbinary)
 ###3.b. GetTemperature
 
 Необходимо вывести таблицу для температуры по цельсию в одном столбце от `fromTemperature` до `toTemperature` c шагом `step`. Во втором столбце вывести температуру по фаренгейту. Перавод расчитывается по формуле `celsius=(5/9)*(fahrenheit-32) fahrenheit=(9/5)*celsius + 32`.
@@ -584,3 +585,4 @@ Celsius     Fahrenheit
 40          104
 60          140
 ```
+[шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/gettemperature)
