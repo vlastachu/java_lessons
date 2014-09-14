@@ -4,7 +4,7 @@ package ru.progexcenter.lesson1.getbinary;
  * Homework for java courses.
  * Writes the table of temperature in celsius and fahrenheit metrics in given range.
  */
-class Triangle {
+class GetTemperature {
     /**
      * Entry point of application.
      * @argument array of strings which represent command line arguments
