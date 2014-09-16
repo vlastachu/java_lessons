@@ -293,7 +293,6 @@ Class Engine{
         //подписываемся на нажатия клавиш
         //читаем файл хранящий положение всех объектов на карте
         //инициализируем массив с мешами записываем туда все нужные объекты и игрока
-        
     }
     void onDraw(){
         for(int i = 0; i < meshes.length; i++)
@@ -305,7 +304,6 @@ Class Engine{
         for(int i = 0; i < meshes.length; i++)
             for(int i = 0; i < meshes.length; i++)
                 //нужно проверить все коллизии
-        
     }
 }
 
@@ -320,17 +318,11 @@ class Player extends Mesh{
         //смерть
     }
     
-    void Move(Direction dir){
-    
-    }
+    void Move(Direction dir){}
 }
 
-class Wall extends Mesh{
+class Wall extends Mesh{}
 
-}
-
-class Trap extends Mesh{
-
-}
+class Trap extends Mesh{}
 
 ```
