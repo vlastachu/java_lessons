@@ -12,9 +12,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
+ * Sierpinsky Triangle
  * A minimal program that draws with JOGL in a Swing JFrame using the AWT GLCanvas.
  *
- * @author Wade Walker
  */
 public class Main {
 
@@ -44,7 +44,7 @@ public class Main {
 			}
 		});
 
-		final JFrame jframe = new JFrame( "One Triangle Swing GLCanvas" );
+		final JFrame jframe = new JFrame( "" );
 		jframe.addWindowListener( new WindowAdapter() {
 			public void windowClosing( WindowEvent windowevent ) {
 				jframe.dispose();
@@ -52,8 +52,8 @@ public class Main {
 			}
 		});
 
-		jframe.getContentPane().add( glcanvas, BorderLayout.CENTER );
-		jframe.setSize( 640, 480 );
-		jframe.setVisible( true );
+		jframe.getContentPane().add(glcanvas, BorderLayout.CENTER);
+		jframe.setSize(640, 480);
+		jframe.setVisible(true);
 	}
 }
