@@ -28,17 +28,20 @@ public class Shape {
 
 	protected static void render( GL2 gl2, int width, int height ) {
 		gl2.glClear( GL.GL_COLOR_BUFFER_BIT );
+		//fill window with white color
 		gl2.glClearColor(1,1,1,0);
 		// draw a triangle filling the window
 		gl2.glLoadIdentity();
 		gl2.glBegin( GL.GL_TRIANGLES );
+			//set the red color
 			gl2.glColor3f( 1, 0, 0 );
+			//set 2D points 
+			//down left
 			gl2.glVertex2f( 0, 0 );
-			gl2.glColor3f( 1, 0, 0 );
+			//down right
 			gl2.glVertex2f( width, 0 );
-			gl2.glColor3f( 1, 0, 0 );
+			//center top
 			gl2.glVertex2f( width / 2, height );
-			gl2.glColor3f( 1, 1, 1 );
 			fractal(gl2, steps, width/2, height, 0, 0, width);
 		gl2.glEnd();
 
