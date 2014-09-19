@@ -378,7 +378,33 @@ public class Main{
 Самое простое задание.
 Необходимо вывести календарик в консоль. В календаре должен отображаться текущий месяц. Текущее число должно быть выделено (например звездочкой).
 Первой строкой должно быть название месяца, вторая строка - сокращенные дни недели (mon tue wed). Дальше числа текущего месяца.
-Также для выделения выходных и нынешнего дня можно воспользоваться escape-последовательностями, которые позволяют задавать цвета в консоли. Можно сделать с помощью готовой библиотеки http://www.diogonunes.com/work/jcdp/
+Также для выделения выходных и нынешнего дня можно воспользоваться escape-последовательностями, которые позволяют задавать цвета в консоли. Можно сделать с помощью готовой библиотеки https://github.com/fusesource/jansi
+
+Инструкция для jansi:
+1. Скачайте отсюда jar http://jansi.fusesource.org/download.html версия не особо важна (например 1.8 работает).
+2. Поставьте куда-нибудь этот jar. Укажите этот адрес в classpath (как это показано выше). Либо поставьте jar в ту же папку в которой и исходник.
+3. Не забудьте импортировать 
+```java
+import org.fusesource.jansi.AnsiConsole;
+import static org.fusesource.jansi.Ansi.*;
+import static org.fusesource.jansi.Ansi.Color.*;
+```
+4. Не забудьте в начале main указать `AnsiConsole.systemInstall();`.
+
+[Небольшой шаблон](https://github.com/vlastachu/java_lessons/blob/master/src/ru/progexcenter/lesson3/calendar/ConsoleCalendar.java) 
+
+Советы для выполнения задания:
+
+Вам понадобятся следующие классы: [java.util.Calendar](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html) (и его методы [get](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#get(int\));  [set](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#set(int,%20int\)); [getMaximum](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#getMaximum(int\)); [getMinimum](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#getMaximum(int\))), а  также `DateFormatSymbols(new Locale("en")).getShortWeekdays()` чтобы получить массив дней-недель. и `new SimpleDateFormat("MMMM").format(calendar.getTime())` чтобы получить названия месяца.
+
+Пример использования: 
+```java
+//ставим календарь на первый день месяца
+calendar.set(Calendar.DAY_OF_MONTH, c.getActualMinimum(Calendar.DAY_OF_MONTH));
+//получаем день недели
+calendar.get(Calendar.DAY_OF_WEEK);
+```
+Здесь уже почти все что нужно.
 
 ##FractalCurve
 Нарисовать фрактальную вроде http://en.wikipedia.org/wiki/Koch_snowflake (думаю стоит нарисовать треугольник и к каждой из сторон применить рекурсивную функцию) ну или драконий фрактал (это уже посложнее). 
