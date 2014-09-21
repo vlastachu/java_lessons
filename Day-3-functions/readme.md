@@ -452,11 +452,11 @@ calendar.get(Calendar.DAY_OF_WEEK);
 
 Что выйдет в случае успеха:
 
-![success](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson3/clock/success.png)
+![success](https://raw.githubusercontent.com/vlastachu/java_lessons/master/src/ru/progexcenter/lesson3/clock/fail.png)
 
 И в случае провала:
 
-![fail](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson3/clock/fail.png)
+![fail](https://raw.githubusercontent.com/vlastachu/java_lessons/master/src/ru/progexcenter/lesson3/clock/success.png)
 
 Вам предстоит сделать аналоговые часы. В примере уже приложены картинки стрелок и фон часов, сделана загрузка их в текстуру. Вам остаётся лишь правильно их рассположить.
 
