@@ -395,7 +395,7 @@ import static org.fusesource.jansi.Ansi.Color.*;
 
 Советы для выполнения задания:
 
-Вам понадобятся следующие классы: [java.util.Calendar](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html) (и его методы [get](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#get(int\));  [set](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#set(int,%20int\)); [getMaximum](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#getMaximum(int\)); [getMinimum](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#getMaximum(int\))), а  также `DateFormatSymbols(new Locale("en")).getShortWeekdays()` чтобы получить массив дней-недель. и `new SimpleDateFormat("MMMM").format(calendar.getTime())` чтобы получить названия месяца.
+(в этом абзаце кажется ломается разбор markdown ну вообщем вы видите ссылки, если не перейти по ним то гуглите) Вам понадобятся следующие классы: [java.util.Calendar](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html) (и его методы [get](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#get(int));  [set](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#set(int,%20int)); [getMaximum](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#getMaximum(int)); [getMinimum](http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html#getMaximum(int))), а  также `DateFormatSymbols(new Locale("en")).getShortWeekdays()` чтобы получить массив дней-недель. и `new SimpleDateFormat("MMMM").format(calendar.getTime())` чтобы получить названия месяца.
 
 Пример использования: 
 ```java
