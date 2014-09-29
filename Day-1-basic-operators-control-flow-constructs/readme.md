@@ -488,7 +488,7 @@ ASCII-изображение поля с чередующимися клетка
 +-----+
 ```
 [шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/chessfield)
-###2. CubicSolve
+###~~2. CubicSolve~~ (снято)
 4 входных параметра (double) a, b, c, d. Представляют собой коэффициенты в кубическом уравнении:
 
 `a*x^3 + b*x^2 + c*x + d = 0` (здесь `^` знак возведения в степень - в java этот оператор есть, но делает кое-что другое)
@@ -541,6 +541,60 @@ x3 = 1.66
 [шаблон](https://github.com/vlastachu/java_lessons/tree/master/src/ru/progexcenter/lesson1/cubicsolve)
 
 (скорей всего у вас будет на порядок точнее вывод).
+
+##Решение CubicSolve
+Задание оказалось с большим количеством подводных камней в основном:
+
+1. Целочисленное деление (ну кто на это наткнулся - тому ещё хорошо)
+2. pow которая совсем не годится для извлечения кубического корня. Мой промах - не читал документацию функции. Если первый аргумент pow - отрицательное число, а второй вещественное, то получаем Double.NaN.
+3. Сложности с википедией (в обоих статьях приходится делать небольшую замену переменных, что не очень очевидно).
+
+Ниже представлен код, который не является полным решением и во-вторых возможно тоже не всегда работает.
+```java
+	public static void main(String[] args) {
+		//лучше бы конечно double использовать
+		final float a = Float.parseFloat(args[0]);
+		final float b = Float.parseFloat(args[1]);
+		final float c = Float.parseFloat(args[2]);
+		final float d = Float.parseFloat(args[3]);
+		//наверное выглядит не так наглядно как возведение в степень.
+		final float p = (3*a*c - b*b)/(3*a*a);
+		final float q = (2*b*b*b - 9*a*b*c + 27*a*a*d)/(27*a*a*a);
+		final float Q = p*p*p/27 + q*q/4;
+		if(Q >= 0){
+			//используем cbrt заместо pow т.к. при отрицательных числах pow даёт NaN
+			final float alpha = (float)Math.cbrt((-q/2.0) + Math.sqrt(Q));
+			final float beta  = (float)Math.cbrt((-q/2.0) - Math.sqrt(Q));
+			//В статье про формулу кардано используется переменная y = x + b/(3a)
+			//Чтобы получить ответ придется сделать обратное преобразование
+			System.out.println("x1 = " + ((alpha + beta) - b/(3*a)));
+
+			final float realPart = (-alpha - beta)/2 - b/(3*a);
+			System.out.println("x2 = " + realPart + " + i*" + (alpha - beta)/2* Math.cbrt(3));
+			System.out.println("x3 = " + realPart + " - i*" + (alpha - beta)/2* Math.cbrt(3));
+		}
+		else {
+			//ещё один тонкий момент: в статье про тригонометрическую формулу используется
+			//x^3 + ax^2 + bx + c = 0  то есть придётся все поделить на a
+			final float a1 = b/a;
+			final float b1 = c/a;
+			final float c1 = d/a;
+
+			final float Q1 = (a1*a1 - 3*b1)/9;
+			float R = (float)(2* Math.pow(a1, 3) - 9*a1*b1 + 27*c1)/54;
+			float S = (float)(Math.pow(Q1, 3) - Math.pow(R, 2));
+			if(S >= 0) {
+				float theta = (float) (Math.acos(R / Math.sqrt(Q1*Q1*Q1)) / 3);
+				System.out.println("x1 = " + (-2 * Math.sqrt(Q1)*Math.cos(theta) - a1/3));
+				System.out.println("x2 = " + (-2 * Math.sqrt(Q1)*Math.cos(theta + 2 * Math.PI/3) - a1/3));
+				System.out.println("x3 = " + (-2 * Math.sqrt(Q1)*Math.cos(theta - 2 * Math.PI/3) - a1/3));
+			}
+			else{
+				System.out.println("wrong state");
+			}
+		}
+	}
+```
 
 ###3.a. GetBinary
 На вход подаётся три числа. Требуется вывести биты первого в определенном диапозоне (см. ниже условия и пример). Здесь вам поможет оператор `>>` который сдвигает биты вправо на n позиций. И оператор `&`.
