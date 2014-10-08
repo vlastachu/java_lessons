@@ -13,18 +13,43 @@ java_lessons
    * [Циклы](https://github.com/vlastachu/java_lessons/tree/master/Day-1-basic-operators-control-flow-constructs#Циклы);
    * [Задания](https://github.com/vlastachu/java_lessons/tree/master/Day-1-basic-operators-control-flow-constructs#Задания);
 2. [Концепции Java](https://github.com/vlastachu/java_lessons/Day-2-Conceptions).
-   * [Виртуальная машина Java](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Виртуальная-машина-java)
-   * []()
-3. [Функции](https://github.com/vlastachu/java_lessons/Day-3-functions) (статические методы): полиморфизм, рекурсия. 
-4. [Сложные типы](https://github.com/vlastachu/java_lessons/Day-4-OOP) часть 1. Работа с ссылками. Boxed и Unboxed. string. Создание классов: модификаторы доступа, static, final.
-5. Наследование. this, super, overload. Коллекции.
-5. интерфейсы, абстрактные классы, пакеты.
-6. Обработка строк, java.lang (Runtime, System, Math).
-7. Обработка исключений. + сокеты всякие там.
-8. Ввод, вывод (подробнее). InputStrem, Reader, Writer, StringBuilder, serializeble (просто упомянуть). 
-9. Parallel \\ Concurency.
-10. аннотации, reflection.
+   * [Виртуальная машина Java](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Виртуальная-машина-java) - что такое интерпритируемые языки, что такое jre, jdk, разные редакции java;
+   * [Управление памятью](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Управление-памятью) - ручное управления памятью, автоматическое (shared pointer) и сборка мусора;
+   * [Язык java](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Язык-java);
+   * [Типизация](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Типизация);
+   * [ООП](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#ООП);
+   * [Классы](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Классы)
+   * [Примеры встроенных объектов](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Примеры-встроенных-объектов) - [Массивы](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Массивы), [Многомерные массивы](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Многомерные-массивы), [Строки](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Строки);
+   * [Задания](https://github.com/vlastachu/java_lessons/tree/master/Day-2-Conceptions#Задания);
+3. [Функции](https://github.com/vlastachu/java_lessons/Day-3-functions) (статические методы).
+   * [Полиморфизм](https://github.com/vlastachu/java_lessons/tree/master/Day-3-functions#Полиморфизм);
+   * [Рекурсия](https://github.com/vlastachu/java_lessons/tree/master/Day-3-functions#Рекурсия);
+   * [Переменное число параметров](https://github.com/vlastachu/java_lessons/tree/master/Day-3-functions#Переменное-число-параметров);
+   * [Пример: нахождение корня числа](https://github.com/vlastachu/java_lessons/tree/master/Day-3-functions#Пример-нахождение-корня-числа);
+   * [Java 8: лямбда функции.](https://github.com/vlastachu/java_lessons/tree/master/Day-3-functions#java-8-лямбда-функции);
+   * [Задания](https://github.com/vlastachu/java_lessons/tree/master/Day-3-functions#Задания);
+4. [Сложные типы (ООП)](https://github.com/vlastachu/java_lessons/Day-4-OOP)
+   * [Объекты](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#Объекты);
+   * [autoboxing](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#autoboxing);
+   * [пример cube](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#пример-cube);
+   * [Спецификаторы доступа](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#Спецификаторы-доступа);
+   * [static](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#static);
+   * [Ключевое слово this](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#Ключевое-слово-this);
+   * [final (инициализация)](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#final-инициализация);
+   * [Наследование](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#Наследование) - [Зачем нам может пригодиться наследование?](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#Зачем-нам-может-пригодиться-наследование);
+   * [Задание](https://github.com/vlastachu/java_lessons/tree/master/Day-4-OOP#Задание);
+5. [Продолжение ООП + коллекции](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections)
+   * [Интерфейсы и абстрактные классы.](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#Интерфейсы-и-абстрактные-классы);
+   * [Контейнеры](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#Контейнеры);
+   * [Параметризованные и типизованные контейнеры](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#Параметризованные-и-типизованные-контейнеры);
+   * [List](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#list);
+   * [Set](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#set);
+   * [Map](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#map);
+   * [java.util.Collections](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#javautilcollections);
+   * [java.io](https://github.com/vlastachu/java_lessons/tree/master/Day-5-Collections#javaio);
+   * [Задания]();
+6. Обработка исключений
+   * Exception;
+   * `try`, `catch`;
 
 
-
-НЕ забыть где-нибудь упомянуть про java.util .Date, .Random, .Observable (если  они пройдут соответствующий паттерн).
