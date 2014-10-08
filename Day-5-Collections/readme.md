@@ -495,7 +495,7 @@ class MyList<E> implements List<E>{
 
 
 ##Vector
-Реализуйте класс содержащий массив из 3х элементов и представляющий собой 3мерный [вектор](https://ru.wikipedia.org/wiki/Вектор_(математика\)). (Отдельное интересное задание n-мерный вектор). 
+Реализуйте класс содержащий массив из 3х элементов и представляющий собой 3мерный [вектор](https://ru.wikipedia.org/wiki/Вектор_(математика)). (Отдельное интересное задание n-мерный вектор). 
 
 В java нет перегрузки операторов, поэтому сделаем их методами 
 ```java
@@ -504,7 +504,7 @@ public Vector minus(Vector v);
 public Vector product(Vector v); //векторное произведение !необязательно! https://ru.wikipedia.org/wiki/Векторное_произведение
 public double dot(Vector v); //скалярное произведение https://ru.wikipedia.org/wiki/Скалярное_произведение
 public double length(); // длина вектора
-public doble distanceTo(Vector v);
+public double distanceTo(Vector v);
 ```
 Также можно сделать методы getX, getY, getZ.
 
