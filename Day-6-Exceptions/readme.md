@@ -289,7 +289,7 @@ try (OutputStream stream = openOutputStream()) {
 
 Выше мы уже познакомились с вводом/выводом байтов. Часто вам понадобится работать с символами (char), которые представлены в размере более 1 байта (хотя не всегда). В java символы кодируются в UTF16, занимают 2 байта. То есть если вы собираетесь работать с файлом как с текстом, то `FileInputStream` вам скорее всего не подойдёт. Для этих целей существуют `FileReader` и `FileWriter` Это другая ветка в иерархии классов java.io
 
-![иерархия reader writer](http://warren.chinalle.com/wp-content/uploads/2011/08/java-reader-writer-class-hierarchy.gif)
+![иерархия reader writer](warren.chinalle.com/wp-content/uploads/2011/08/java-reader-writer-class-hierarchy.gif)
 
 На низшем уровне работа с устройством ввода вывода все равно осуществляется через байты, но Reader'ы все же удобнее, особенно если речь заходит о локазлизации приложения. Кстати вот тут http://tutorials.jenkov.com/java-io/overview.html (внизу страницы) есть неплохая таблица для классов java.io которую мне лень было переписать. 
 
