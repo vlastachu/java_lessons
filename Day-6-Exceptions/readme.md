@@ -433,7 +433,7 @@ catch(IOException e){
 
 Пример работы фильтра (да выглядит так как будто произошёл какойто рандом. наверное интереснее будет если обменяете значения каналов или инверсите их).
 
-![example](https://yadi.sk/i/IfXNZ7pOc9g6T)
+![example](https://leto35h.storage.yandex.net/rdisk/a4f0eeb8127944fe27af0b6a8aa9c59b/mpfs/TwBHoIAhFTOU5QiZbUMRpGMJCvhIoGsdA9gqNH3GhBLnEdJ2s3EaMDdNxNZNnxgcopgtws5VQlAur2J7wguSIw==?uid=0&filename=lal.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=cee3ac87d08e9862a6e372d7a87f3e39&rtimestamp=5444ce56&force_default=no)
 
 [Описание формата](https://ru.wikipedia.org/wiki/BMP)
 
