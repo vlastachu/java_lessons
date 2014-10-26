@@ -8,7 +8,7 @@
 
 *Иерархия классов java.io отсносящикся к InputStream, отдельно выделен класс не из java.io но всё равно наследующийся от InputStream (таких много, это просто единичный пример) и отдельно выделены классы-декораторы.*
 
-!(hierarchy)[https://leto41g.storage.yandex.net/rdisk/ac650f6acc90924ea61c14fe61d84a1d/mpfs/oVuHhReuvOjokimgr1GANfWhO8BEmBlQ-DlTuBp7Dqx3wO_PPe7afTq5Tuf_uuixuK6xvoMAO3a9ghCBCH-QOA==?uid=0&filename=2014-10-26%2019-27-19%20%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=78a3a5fa4002442bb4eec09a53f76ca9&rtimestamp=544d1801&force_default=no]
+![hierarchy](https://leto41g.storage.yandex.net/rdisk/ac650f6acc90924ea61c14fe61d84a1d/mpfs/oVuHhReuvOjokimgr1GANfWhO8BEmBlQ-DlTuBp7Dqx3wO_PPe7afTq5Tuf_uuixuK6xvoMAO3a9ghCBCH-QOA==?uid=0&filename=2014-10-26%2019-27-19%20%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=78a3a5fa4002442bb4eec09a53f76ca9&rtimestamp=544d1801&force_default=no)
 
 InputStream - абстрактный класс, предназначенный для ввода байтов из различных источников таких, как:
 
