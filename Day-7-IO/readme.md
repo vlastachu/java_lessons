@@ -110,6 +110,95 @@ public int read(char cbuf[], int off, int len) throws IOException;
 
 Scanner более удобный в основном предназначен для задачи когда вы примерно знаете структуру файла. StreamTokenizer работает быстрее (что на самом деле не очень важно) и в целом напоминает парсер структурированного файла. Метод `nextToken` возвращает int значение которого представляет тип токена (было бы удобнее если бы это был enum). Тип может быть `TT_EOL` (конец линии), `TT_NUMBER` (число), `TT_WORD` (слово), `TT_NOTHING` (ничего - значение по умолчанию). Если это число то его можно прочитать через публичное поле `public double nval;` (дабл как самый ёмкий тип) если слово то через `public String sval;`. В общем плохой в плане дизайна класс. Может быть удобно в конкретной ситуации но в целом плохой класс.
 
+`java.util.Scanner` по-моему очень удобен и подойдёт вам во многих задачах. С другой стороны он не вписывается в общую иерархию потоков. В конструктор Scanner-у можно напрямую передать объект типа `File` или `String`. Дальше для чтения можно пользоваться *регулярными выражениями* (долгая тема). При этом внутри уже есть заготовки для разных регулярных выражений (шаблонов по которым происходит поиск в тексте). Например есть `boolean hasNext(Pattern pattern)`, который говорит есть далее выражение подходящее под шаблон и есть готовые шаблоны `boolean hasNextBoolean()` и `boolean hasNextByte()` и тд, можно задать разрядность `boolean hasNextByte(int radix)`. Можно прочитать `byte nextByte()` `double nextDouble()`, `String nextLine()`. Есть ещё куча полезных методов типа `skip`.
+
+Для примера решим [задачу с тимуса](http://acm.timus.ru/problem.aspx?space=1&num=1100). Сказать по правде я её немного не понял - неужели это простая сортировка? Ну что ж сделаем класс, который сортируется по второму полю 
+
+Для начала скину решение со StreamTokenizer (оно очень плохое по-моему) - оно прошло проверку на тимусе (там требуется чтобы ввод и вывод были стандартными). Импорты я пропускаю. 
+
+```java
+
+public class Main {
+	//реализуем Comparable чтобы можно было сравнивать в стандартных алгоритмах
+	static class TableNode implements Comparable<TableNode>{
+		private final int id, m; // так эти поля названы в условии задачи
+		public TableNode(int _id, int _m){
+			id = _id;
+			m = _m;
+		}
+
+		@Override
+		public int compareTo(TableNode o) {
+			return Integer.compare(o.m, m);
+			//здесь я поставил аргументы наоборот т.к. нужна сортивка по убыванию
+		}
+
+		@Override
+		public String toString() {
+			return id + " " + m;
+		}
+	}
+	static StreamTokenizer scanner;
+	static int nextInt() throws IOException{
+		scanner.nextToken();
+		return (int)scanner.nval;
+	}
+
+    public static void main(String[] args) throws IOException{
+		List<TableNode> table;
+		scanner = new StreamTokenizer(System.in);
+		final int n = nextInt();
+		table = new ArrayList<>(n);// <> означает что параметр будет такой же какой указан в типе переменной
+		for (int i = 0; i < n; ++i)
+			table.add(new TableNode(nextInt(), nextInt()));
+		Collections.sort(table);
+			for(TableNode node: table)
+				System.out.println(node);
+    }
+}
+```
+
+Далее решение со `Scanner` (которое я сначала писал для файлов) оно достаточно лаконичное, выразительное, но не прошло из-за времени - там стояло ограничение на секунду. Сначала я подумал, что это такая загвоздка задачи, что речь идет не тупо про сортировку, но видимо именно так.
+
+```java
+public class Main {
+	//реализуем Comparable чтобы можно было сравнивать в стандартных алгоритмах
+	static class TableNode implements Comparable<TableNode>{
+		private final int id, m; // так эти поля названы в условии задачи
+		public TableNode(int _id, int _m){
+			id = _id;
+			m = _m;
+		}
+
+		@Override public int compareTo(TableNode o) {
+			return Integer.compare(o.m, m);
+			//здесь я поставил аргументы наоборот т.к. нужна сортивка по убыванию
+		}
+
+		@Override public String toString() {
+		// так проще с выводом
+			return id + " " + m;
+		}
+	}
+
+    public static void main(String[] args) throws IOException{
+		List<TableNode> table;
+		try(Scanner scanner = new Scanner(new File("input.txt"))){
+			final int n = scanner.nextInt();
+			table = new ArrayList<>(n);// <> означает что параметр будет такой же какой указан в типе переменной
+			for (int i = 0; i < n; ++i)
+				table.add(new TableNode(scanner.nextInt(), scanner.nextInt()));
+		}
+		Collections.sort(table);
+		try(PrintWriter out = new PrintWriter(new FileWriter("output.txt"))){
+			for(TableNode node: table)
+				out.println(node);
+		}
+    }
+}
+```
+
+
 #RandomAccessFile
 
 Класс для работы с файлами произвольного доступа. Никак не вписывается в иерархии упомянутые выше - наслудется от Object. Позволяет произвольно ездить по файлу в любое положение и оттуда читать\записывать. В конструкторе имеет второй аргумент, который указывает что следует открыть файл на чтение `"r"` либо на чтение и запись `"rw"`. Рекомендую по возможности использовать другие классы. Здесь подробно на нём останавливаться не буду. 
