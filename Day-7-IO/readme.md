@@ -148,7 +148,8 @@ public class Main {
 		List<TableNode> table;
 		scanner = new StreamTokenizer(System.in);
 		final int n = nextInt();
-		table = new ArrayList<>(n);// <> означает что параметр будет такой же какой указан в типе переменной
+		// <> означает что параметр будет такой же какой указан в типе переменной
+		table = new ArrayList<>(n);
 		for (int i = 0; i < n; ++i)
 			table.add(new TableNode(nextInt(), nextInt()));
 		Collections.sort(table);
@@ -185,7 +186,8 @@ public class Main {
 		List<TableNode> table;
 		try(Scanner scanner = new Scanner(new File("input.txt"))){
 			final int n = scanner.nextInt();
-			table = new ArrayList<>(n);// <> означает что параметр будет такой же какой указан в типе переменной
+			// <> означает что параметр будет такой же какой указан в типе переменной
+			table = new ArrayList<>(n);
 			for (int i = 0; i < n; ++i)
 				table.add(new TableNode(scanner.nextInt(), scanner.nextInt()));
 		}
